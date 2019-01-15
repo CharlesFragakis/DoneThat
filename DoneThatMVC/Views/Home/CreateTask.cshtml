@@ -1,0 +1,59 @@
+﻿@model DoneThatMVC.Models.Task
+@{
+    ViewData["Title"] = "CreateTask";
+}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <h2>Create new task</h2>
+    <form method="post" action="@Url.Action("CreateSubmitSession","Home")">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="Title">Title</label>
+                @Html.TextBoxFor(i => i.Title, new { @class = "form-control", placeholder = "Title" })
+                @Html.ValidationMessageFor(i => i.Title)
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="Description">Description</label>
+                @Html.TextBoxFor(i => i.Description, new { @class = "form-control", placeholder = "Description" })
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="Title">Start</label>
+                @Html.TextBoxFor(i => i.Start, new { @class = "form-control", placeholder = "Start" })
+                @Html.ValidationMessageFor(i => i.Start)
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="Title">Finish</label>
+                @Html.TextBoxFor(i => i.Finish, new { @class = "form-control", placeholder = "Finish" })
+                @Html.ValidationMessageFor(i => i.Finish)
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="Title">Date</label>
+                @Html.TextBoxFor(i => i.Date, new { @class = "form-control", placeholder = "Date" })
+                @Html.ValidationMessageFor(i => i.Date)
+            </div>
+        </div>
+        <div class="form-row form-check-inline">
+            <input class="form-check-input" type="radio" name="inlinePriority" id="inlinePriority1" value="priority1">
+            <label class="form-check-label" for="inlinePriority1">1</label>
+        </div>
+        <div class="form-row form-check-inline">
+            <input class="form-check-input" type="radio" name="inlinePriority" id="inlinePriority2" value="priority2">
+            <label class="form-check-label" for="inlinePriority2">2</label>
+        </div>
+        <div class="form-row form-check-inline">
+            <input class="form-check-input" type="radio" name="inlinePriority" id="inlinePriority3" value="priority3">
+            <label class="form-check-label" for="inlinePriority3">3</label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Create</button>
+        <button type="button" class="btn btn-primary" onclick="@("window.location.href='" + Url.Action("Index", "Home") + "'")">Cancel</button>
+    </form>
+</main>

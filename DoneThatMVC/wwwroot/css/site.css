@@ -1,0 +1,111 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*testhere*/
+body {
+    background-color: #091542;
+}
+
+main {
+    margin-top: 0px;
+}
+
+.container {
+    margin-top: 30px;
+    /*background-color:darkgray;*/
+}
+
+.container-fluid {
+    margin-top: 30px;
+    /*background-color: darkgray;*/
+}
+
+.navbar .navbar-brand {
+    color: #091542 !important;
+}
+
+.navbar .navbar-nav li a {
+    color: #091542 !important;
+}
+
+.navbar .nav-item .dropdown-menu .dropdown-item {
+    color: #091542 !important;
+}
+
+    .navbar .nav-item .dropdown-menu .dropdown-item:hover {
+        color: #ffffff !important;
+        background-color: #091542 !important;
+    }
+
+.tablehead {
+    color: #091542 !important;
+    background-color: #a9a9a9 !important;
+}
+
+.table-hover tbody tr {
+    color: #a9a9a9 !important;
+    background-color: #091542 !important;
+}
+
+    .table-hover tbody tr:hover {
+        color: #a9a9a9 !important;
+        background-color: #07102e !important;
+    }
+
+.btn-primary {
+    background-color: #091542 !important;
+    border-color: #091542 !important;
+}
+
+.taskList {
+    list-style-type: none !important;
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.taskList li:hover {
+        background-color:white !important;
+}
+
+.taskList li a:hover {
+    color: #091542 !important;  
+}
+
+.accordion .btn :hover {
+    color: #091542 !important;
+} 

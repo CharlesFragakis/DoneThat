@@ -1,0 +1,151 @@
+﻿@model List<DoneThatMVC.Models.Task>
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<main class="px-4">
+
+    <div class="table-responsive">
+
+
+        <table class="table table-hover table-responsive-sm">
+            <thead class="tablehead">
+
+                <tr>
+
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Start</th>
+                    <th>Finish</th>
+                    <th>Completed</th>
+                    <th>Priority</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>item.Title</td>
+                    <td>item.Description</td>
+                    <td>item.Start</td>
+                    <td>item.Finish</td>
+                    <td>item.Completed</td>
+                    <td>item.Priority</td>
+                    <td>new</td>
+                </tr>
+                <tr>
+                    <td>item.Title</td>
+                    <td>item.Description</td>
+                    <td>item.Start</td>
+                    <td>item.Finish</td>
+                    <td>item.Completed</td>
+                    <td>item.Priority</td>
+                    <td>new</td>
+                </tr>
+                @*@foreach (var item in Model)
+                    {
+                        <tr class="table-active">
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>@item.Start</td>
+                            <td>@item.Finish</td>
+                            <td>@item.Completed</td>
+                            <td>@item.Priority</td>*@
+                @*<td>
+                        <a href="@Url.Action("Edit","Home")?id=@item.Id">Edit</a> |
+                            <a href="javascript:loadTask(@item.Id)">Delete</a> |
+                            <a href="#">Complete</a>
+                    </td>
+                    </tr>*@
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+</main>
+@*<main class="col-md-10 col-sm-12 px-4">
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th colspan="7">
+                            <a href="@Url.Action("CreateTask","Home")">Create task</a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Start</th>
+                        <th>Finish</th>
+                        <th>Completed</th>
+                        <th>Priority</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                        {
+                            <tr class="table-active">
+                                <td>@item.Title</td>
+                                <td>@item.Description</td>
+                                <td>@item.Start</td>
+                                <td>@item.Finish</td>
+                                <td>@item.Completed</td>
+                                <td>@item.Priority</td>
+                    <td>
+                    <a href="@Url.Action("Edit","Home")?id=@item.Id">Edit</a> |
+                        <a href="javascript:loadTask(@item.Id)">Delete</a> |
+                        <a href="#">Complete</a>
+                    </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>*@
+<div id="deleteModal" class="modal hide" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Delete task</h2>
+
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button id="deleteButton" class="btn btn-primary" type="button">Delete</button>
+                <button id="cancelButton" type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*@section Scripts {
+        <script>
+        function loadTask(id) {
+            $('.modal-body').load('@Url.Action("Delete","Home")?id=' + id, function () {
+                $('#deleteModal').show({ show: true });
+            });
+        };
+
+            $(document).ready(function () {
+                $('#deleteButton').click(function () {
+                    console.log("Hello");
+                    $('#deleteForm').submit();
+                    $('#deleteModal').hide();
+                });
+            });
+
+            $('#cancelButton').click(function () {
+                $('#deleteModal').hide();
+            });
+        </script>
+    }*@
+

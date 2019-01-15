@@ -1,0 +1,28 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Messages:
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">View Message</a>
+            <a class="dropdown-item" href="#">Friendships Request</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Search For:
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Log Out</a>
+            <a class="dropdown-item" href="#">Options</a>
+            <a class="dropdown-item" href="#">Quick Task</a>
+        </div>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="navlink" href="#">Sign up</a>
+    </li>
+}

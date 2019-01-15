@@ -1,0 +1,32 @@
+﻿body {
+    background-color: #091542;
+}
+main {
+    margin-top: 60px;
+}
+.container{
+    margin-top:60px;
+    background-color:darkgray;
+}
+.container-fluid{
+    margin-top:60px;
+    background-color: darkgray;
+}
+.navbar .navbar-brand{
+    color: #091542 !important;
+}
+.navbar .navbar-nav li a {
+    color: #091542 !important;
+}
+
+.navbar .nav-item .dropdown-menu .dropdown-item {
+    color: #091542 !important;
+}
+.navbar .nav-item .dropdown-menu .dropdown-item:hover {
+        color: #ffffff !important;
+        background-color: #091542 !important;
+}
+
+
+
+
